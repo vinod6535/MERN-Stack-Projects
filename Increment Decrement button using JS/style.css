@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid red;
+    height: 100vh;
+    background-color: cornflowerblue;
+    margin-left:-4rem ;
+}
+
+#heading{
+    margin-bottom: 10rem;
+    text-decoration: underline;
+    text-decoration-color: rgb(160, 19, 211);
+}
+
+#content_box{
+    display: flex;
+    border: 2px solid green;
+    margin-left: -16rem;
+    margin-top: 4rem;
+    box-shadow: 4px 4px 11px 1px black;
+}
+
+#heading h1{
+    color: white;
+}
+
+span{
+    color: red;
+}
+
+#num_display{
+    width: 5rem;
+    background-color: white;
+    height: 2.2rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#num_display h2{
+    margin-top:0.2rem ;
+}
+
+button{
+    width: 3rem;
+}
+
+.operation_btn button{
+    cursor: pointer;
+    user-select: none;
+}
