@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Card</title>
     <link rel="stylesheet" href="style.css">
-   
-   
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
 </head>
 
 <body>
@@ -23,14 +24,19 @@
                 <h1>Vinod Saini</h1>
             </div>
             <div class="user_spec">
-                <h3 class="fa-solid fa-share">Web Developer</h3>
+                <h3 >Web Developer</h3>
             </div>
             <div class="btn_area">
                 <div id="btn1">
-                    <button  > Share My Profile</button>
+
+                
+                    <button onclick="openModal()" class="btns" > 
+                        <i class="fa-solid fa-share"></i>
+                        Share My Profile</button>
+
                 </div>
                 <div id="btn2">
-                    <button>
+                    <button class="btns">
                         Follow Me
                     </button>
                 </div>
@@ -39,7 +45,42 @@
         <div class="circle_2 circle">
 
         </div>
+
+        <div class="modal">
+            <div id="heading">
+                <h1>Share My Profile</h1>
+                <div>
+                    <i onclick="closeModal()" class="fa-solid fa-xmark close"></i>
+                </div>
+            </div>
+            
+            <h3>Share this via</h3>
+            <div id="social_elements">
+                <a href="https://www.facebook.com/priyansh.patel.94651" class="icon" id="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/priyansh79" class="icon" id="twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/_p_r_i_y_a_n_s_h/" class="icon" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://web.whatsapp.com/" class="icon" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://web.telegram.org/z/" class="icon" id="telegram">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+            </div>
+
+        </div>
+
     </div>
+
+    <div class="overlay" onclick="closeModal()"></div>
+
+<script src="functionality.js"></script>
+<script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
