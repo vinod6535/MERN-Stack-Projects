@@ -148,7 +148,7 @@ button:hover{
 
 /* Modal Styling */
 
-.modal {
+.modal{
     position: fixed;
     border: 2px solid white;
     width: 27rem;
@@ -160,10 +160,9 @@ button:hover{
     background: #00000088;
     backdrop-filter: blur(10px);
     display: none;
-    /* opacity: 1;  */
-    transition: 0.5s ease-in-out;
+    transition:0.5s ease-in-out;
+    scale: 0;
 }
-
 
 #heading{
     margin: 1rem;

@@ -1,8 +1,3 @@
-// function closeModal(){
-//     var ans = document.getElementsByClassName("modal");
-//     ans.style.display="none";
-// }
-
 const overlay = document.querySelector(".overlay");
 function closeModal() {
     var modals = document.getElementsByClassName("modal");
@@ -21,3 +16,4 @@ function openModal() {
     }
     overlay.classList.add("overlayActive");
 }
+
