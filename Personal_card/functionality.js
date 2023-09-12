@@ -1,19 +1,20 @@
 const overlay = document.querySelector(".overlay");
-function closeModal() {
-    var modals = document.getElementsByClassName("modal");
+const modals = document.querySelectorAll(".modal");
 
-    for (var i = 0; i < modals.length; i++) {
-        modals[i].style.display = "none";
-    }
+function closeModal() {
+    modals.forEach((modal) => {
+        modal.style.opacity = "0";
+        setTimeout(() => {
+            modal.style.visibility = "hidden";
+        }, 500); // Delay the visibility change
+    });
     overlay.classList.remove("overlayActive");
 }
 
 function openModal() {
-    var modals = document.getElementsByClassName("modal");
-
-    for (var i = 0; i < modals.length; i++) {
-        modals[i].style.display = "block";
-    }
+    modals.forEach((modal) => {
+        modal.style.opacity = "1";
+        modal.style.visibility = "visible";
+    });
     overlay.classList.add("overlayActive");
 }
-
