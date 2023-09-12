@@ -12,6 +12,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    backdrop-filter: blur(15px);
 }
 
 .card_div{
@@ -27,7 +28,6 @@
     flex-direction: column;
     gap: 1rem;
     z-index: 2;
-  backdrop-filter: blur(15px);
   /* display: none; */
 
 }
@@ -149,7 +149,7 @@ button:hover{
 /* Modal Styling */
 
 .modal {
-    position: absolute;
+    position: fixed;
     border: 2px solid white;
     width: 27rem;
     height: 12rem;
@@ -157,15 +157,12 @@ button:hover{
     margin-right: 1.9rem;
     border-radius: 1rem;
     color: white;
-    display: none;
-    transition: all 0.5s ease-in-out;
+    background: #00000088;
     backdrop-filter: blur(10px);
-    z-index: 6;
+    display: none;
+    /* opacity: 1;  */
+    transition: 0.5s ease-in-out;
 }
-
-
-
-
 
 
 #heading{
@@ -258,13 +255,14 @@ button:hover{
   position: fixed;
   background-color: #5f5f5f83;
   top: 0;
-  opacity: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
   pointer-events: none;
   transition: 0.5s ease-in-out;
 }
+
 .overlayActive {
   opacity: 1;
   pointer-events: initial;

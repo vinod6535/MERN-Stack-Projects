@@ -10,8 +10,6 @@ function closeModal() {
     for (var i = 0; i < modals.length; i++) {
         modals[i].style.display = "none";
     }
- 
-
     overlay.classList.remove("overlayActive");
 }
 
@@ -23,5 +21,3 @@ function openModal() {
     }
     overlay.classList.add("overlayActive");
 }
-
-
