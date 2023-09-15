@@ -6,21 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rozorpay</title>
     <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body>
+<body class="overflow-hidden">
+    <!-- Navbar -->
     <nav class="bg-deepBlue">
         <div class="relative w-[100vw] mx-auto flex items-center justify-center">
 
-            <!-- logo -->
-            <a href="/" class="cursor-pointer py-7 px-7 flex">
+            <!-- Logo -->
+            <a href="/" class="cursor-pointer py-7 pr-[10px] mr-3 flex">
                 <img src="./images/logo.svg" width="125px" height="30px">
             </a>
 
-            <ul class="flex space-x-6">
+            <ul class="flex space-x-7 mt-1">
 
                 <li
-                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative">
+                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative opacity-60  opacity-80">
 
                     <a href="#">Payments</a>
 
@@ -32,7 +35,7 @@
 
 
                 <li
-                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative">
+                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative  opacity-80">
 
                     <a href="#">Banking+</a>
 
@@ -44,7 +47,7 @@
 
 
                 <li
-                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative">
+                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative  opacity-80">
 
                     <a href="#">Credit</a>
                 </li>
@@ -52,7 +55,7 @@
 
 
                 <li
-                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative">
+                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative  opacity-80">
 
                     <a href="#">Payroll</a>
                 </li>
@@ -60,7 +63,7 @@
 
 
                 <li
-                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative">
+                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative  opacity-80">
 
                     <a href="#">Resources</a>
 
@@ -72,7 +75,7 @@
 
 
                 <li
-                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative">
+                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative opacity-80">
 
                     <a href="#">Support</a>
 
@@ -83,7 +86,7 @@
 
 
                 <li
-                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative">
+                    class="text-white font-mullish transition-all duration-200 py-3 hover:text-lightBlue cursor-pointer group relative opacity-80">
 
                     <a href="#">Price</a>
 
@@ -92,28 +95,56 @@
                     </div>
                 </li>
 
-                <div class="flex space-x-6">
-                    <img src="./images/india-flag.svg" width="28px" height="20px">
-
-                    <button
-                        class="py-3 px-5 text-white font-mullish border-lightBlue border rounded-sm text-sm font-bold">Log
-                        In</button>
-
-                    <button
-                        class="py-3 px-4 text-lightBlue300 font-mullish bg-white border-white border rounded-sm text-sm font-bold transition-all duration-200 hover:text-lightBlue500 ">Sign
-                        Up ->
-
-                    </button>
-
-
-                </div>
-
-
-
             </ul>
+            <div class="flex space-x-6 ml-20 ">
+                <img src="./images/india-flag.svg" width="28px" height="20px">
+
+                <button
+                    class="py-3 px-5 text-white font-mullish border-lightBlue border rounded-sm text-sm font-bold">Log
+                    In</button>
+
+                <button
+                    class="py-3 px-4 text-lightBlue300 font-mullish bg-white border-white border rounded-sm text-sm font-bold transition-all duration-200 hover:text-lightBlue500 ">Sign
+                    Up<i class="fa-solid fa-arrow-right mx-1"></i>
+
+                </button>
+
+
+            </div>
 
         </div>
     </nav>
+
+    <!-- Chakra section -->
+
+    <div class="bg-deepBlue flex  w-[100vw] h-[77.4vh] justify-center">
+        <!-- Left section -->
+        <div class="flex w-[25%] flex-col h-[80%] ml-50">
+            <div class="flex flex-row">
+                <h1 class="text-white font-mullish text-[2.3rem] leading-[1.2] font-[1000] ml-6 mt-[120px]">Power your
+                    finance, grow your business
+                </h1>
+            </div>
+            <div class="bg-greenLight w-6 h-1 block ml-6 mt-6"></div>
+            <div class="text-gray-400 font-mullish ml-6 mt-6 text-lg">Accept payments from customers. Automate payouts
+                to vendors &
+                employees. Never run out of working capital.</div>
+            <button
+                class="text-white font-bold bg-blue-500 w-40 border h-[50px] border-blue-700 rounded-md ml-6 mt-6 pt--15 hover:bg-blue-600 transition-all duration-100 ">Sign
+                Up Now <i class="fa-solid fa-arrow-right mx-1"></i>
+            </button>
+        </div>
+        <!-- Right section -->
+        <div>
+            <img src="./images/hero-illustration.jpg" width="670x" height="558px">
+        </div>
+    </div>
+
+    <!-- Shape Part -->
+    <div class="absolute left-0 right-0 w-[101%] -mt-8">
+        <img src="./images/hero-shape.svg" class="w-full object-fill scale-x-100">
+    </div>
+
 </body>
 
 </html>
