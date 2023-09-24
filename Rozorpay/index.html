@@ -11,9 +11,10 @@
 
 </head>
 
+
 <body class="">
     <!-- Navbar -->
-    <nav class="bg-deepBlue">
+    <nav class="bg-deepBlue ">
         <div class="relative w-[100vw] mx-auto flex items-center justify-center">
 
             <!-- Logo -->
@@ -118,7 +119,7 @@
 
     <!-- Chakra section -->
 
-    <div class="bg-deepBlue flex  w-[100vw] h-[77.4vh] justify-center">
+    <div class="bg-deepBlue flex  w-[99vw] h-[77.4vh] justify-center ">
         <!-- Left section -->
         <div class="flex w-[25%] flex-col h-[80%] ml-50">
             <div class="flex flex-row">
@@ -142,7 +143,7 @@
     </div>
 
     <!-- Shape Part -->
-    <div class="absolute left-0 right-0 w-[101%] -mt-8">
+    <div class="absolute left-0 right-0 w-[100%] -mt-8">
         <img src="./images/hero-shape.svg" class="w-full object-fill scale-x-100">
     </div>
 
@@ -228,22 +229,20 @@
             </div>
         </div>
 
-        '
-
     </div>
 
     <!-- Creating Payments and other cards -->
 
     <div class="w-full ">
 
-        <div class="w-[65%] grid grid-cols-3 gao-4 m-auto">
+        <div class="w-[65%] grid grid-cols-3 gap-4 m-auto">
             <!-- Box 1 -->
-            <div class="w-full min-h-[15rem]  relative cursor-pointer hover:">
+            <div class="w-full min-h-[15rem]  relative cursor-pointer group ">
                 <img src="./images/payment-link-icon.svg" alt=""
                     class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-[90]">
                 <!-- box shape -->
                 <svg viewBox="0 0 338.6666564941406 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                    class="stroke-1 stroke-[#818597] w-full h-full z-[90] absolute transition-all duration-200"
+                    class="stroke-1 stroke-[#818597] w-full h-full z-[90] absolute transition-all duration-200  "
                     style="stroke-opacity: 0.15;">
                     <path d="m 0 6 
                                   a 6 6 0 0 1 6 -6 
@@ -258,27 +257,38 @@
                                   z" fill="#fff"></path>
                 </svg>
                 <!-- Box content -->
-                <div class="z-[100] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
+                <div class="z-[100] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8 ">
                     <!-- text area -->
                     <div>
-                        <h3 class=" font-mullish font-bold text-deepBlueHead leading-[1.2] rext-[1.375rem]">Payment Link
+                        <h3 class=" font-mullish text-deepBlueHead font-extrabold  text-[1.375rem] leading-[1.2]">
+                            Payment
+                            Link
                         </h3>
                         <p class="font-mullish text-gray-500 mt-6">Share payment link via an email, SMS, messenger,
                             chatbot
                             etc. and get paid immediately</p>
                     </div>
                     <!-- hyperLink Know More -->
-                    <div class="mt-2 items-center cursor-pointer group">
-                        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-                            More</a>
-                        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
+                    <div class="mt-10 items-center cursor-pointer group flex justify-between w-[40%]">
+                        <a href="#"
+                            class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline group-hover:text-blue-400 transition-all duration-200">Know
+                            More <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500"
+                                style="display: inline;"></i> </a>
+
+                    </div>
+                    <div
+                        class=" opacity-0 self-end mt-[41%] absolute group-hover:opacity-100 transition-all duration-200">
+                        <img src="./images/features-wave.svg">
                     </div>
 
+
+
                 </div>
+
             </div>
             <!-- Box2 -->
-            <div class="w-full min-h-[15rem] relative cursor-pointer">
-                <img src="./images/payment-link-icon.svg" alt=""
+            <div class="w-full min-h-[15rem] relative cursor-pointer group">
+                <img src="./images/payment-pages-icon.svg" alt=""
                     class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-[90]">
                 <!-- box shape -->
                 <svg viewBox="0 0 338.6666564941406 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
@@ -300,24 +310,31 @@
                 <div class="z-[100] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                     <!-- text area -->
                     <div>
-                        <h3 class=" font-mullish font-bold text-deepBlueHead leading-[1.2] rext-[1.375rem]">Payment Link
+                        <h3 class=" font-mullish text-deepBlueHead font-extrabold  text-[1.375rem] leading-[1.2]">
+                            Payment
+                            Pages
                         </h3>
-                        <p class="font-mullish text-gray-500  mt-6">Share payment link via an email, SMS, messenger,
-                            chatbot
-                            etc. and get paid immediately</p>
+                        <p class="font-mullish text-gray-500  mt-6">Take your store online instantly with zero coding.
+                            Accept international & domestic payments</p>
                     </div>
                     <!-- hyperLink Know More -->
-                    <div class="mt-2 items-center cursor-pointer group">
-                        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-                            More</a>
-                        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
+                    <div class="mt-10 items-center cursor-pointer group flex justify-between w-[40%]">
+                        <a href="#"
+                            class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline group-hover:text-blue-400 transition-all duration-200">Know
+                            More <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500"
+                                style="display: inline;"></i> </a>
+
+                    </div>
+                    <div
+                        class=" opacity-0 self-end mt-[41%] absolute group-hover:opacity-100 transition-all duration-200">
+                        <img src="./images/features-wave.svg">
                     </div>
 
                 </div>
             </div>
             <!-- Box3 -->
-            <div class="w-full min-h-[15rem] relative cursor-pointer">
-                <img src="./images/payment-link-icon.svg" alt=""
+            <div class="w-full min-h-[15rem] relative cursor-pointer group">
+                <img src="./images/payment-buttons-icon.svg" alt=""
                     class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-[90]">
                 <!-- box shape -->
                 <svg viewBox="0 0 338.6666564941406 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
@@ -339,24 +356,30 @@
                 <div class="z-[100] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                     <!-- text area -->
                     <div>
-                        <h3 class=" font-mullish font-bold text-deepBlueHead leading-[1.2] rext-[1.375rem]">Payment Link
+                        <h3 class="font-mullish text-deepBlueHead font-extrabold  text-[1.375rem] leading-[1.2]">Payment
+                            Buttons
                         </h3>
-                        <p class="font-mullish text-gray-500  mt-6">Share payment link via an email, SMS, messenger,
-                            chatbot
-                            etc. and get paid immediately</p>
+                        <p class="font-mullish text-gray-500  mt-6">Create, Copy & Collect With Payment Button. Collect
+                            one time or subscription payments & more</p>
                     </div>
                     <!-- hyperLink Know More -->
-                    <div class="mt-2 items-center cursor-pointer group">
-                        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-                            More</a>
-                        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
+                    <div class="mt-10 items-center cursor-pointer group flex justify-between w-[40%]">
+                        <a href="#"
+                            class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline group-hover:text-blue-400 transition-all duration-200">Know
+                            More <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500"
+                                style="display: inline;"></i> </a>
+
+                    </div>
+                    <div
+                        class=" opacity-0 self-end mt-[41%] absolute group-hover:opacity-100 transition-all duration-200">
+                        <img src="./images/features-wave.svg">
                     </div>
 
                 </div>
             </div>
             <!-- Box4 -->
-            <div class="w-full min-h-[15rem] relative cursor-pointer">
-                <img src="./images/payment-link-icon.svg" alt=""
+            <div class="w-full min-h-[15rem] relative cursor-pointer group">
+                <img src="./images/subscriptions-icon.svg" alt=""
                     class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-[90]">
                 <!-- box shape -->
                 <svg viewBox="0 0 338.6666564941406 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
@@ -378,24 +401,30 @@
                 <div class="z-[100] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                     <!-- text area -->
                     <div>
-                        <h3 class=" font-mullish font-bold text-deepBlueHead leading-[1.2] rext-[1.375rem]">Payment Link
+                        <h3 class=" font-mullish text-deepBlueHead font-extrabold  text-[1.375rem] leading-[1.2]">
+                            Subscriptions
                         </h3>
-                        <p class="font-mullish text-gray-500  mt-6">Share payment link via an email, SMS, messenger,
-                            chatbot
-                            etc. and get paid immediately</p>
+                        <p class="font-mullish text-gray-500  mt-6">Subscription plans with automated recurring
+                            transactions on various payment modes.</p>
                     </div>
                     <!-- hyperLink Know More -->
-                    <div class="mt-2 items-center cursor-pointer group">
-                        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-                            More</a>
-                        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
+                    <div class="mt-10 items-center cursor-pointer group flex justify-between w-[40%]">
+                        <a href="#"
+                            class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline group-hover:text-blue-400 transition-all duration-200">Know
+                            More <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500"
+                                style="display: inline;"></i> </a>
+
+                    </div>
+                    <div
+                        class=" opacity-0 self-end mt-[41%] absolute group-hover:opacity-100 transition-all duration-200">
+                        <img src="./images/features-wave.svg">
                     </div>
 
                 </div>
             </div>
             <!-- Box5 -->
-            <div class="w-full min-h-[15rem] relative cursor-pointer">
-                <img src="./images/payment-link-icon.svg" alt=""
+            <div class="w-full min-h-[15rem] relative cursor-pointer group">
+                <img src="./images/route-icon.svg" alt=""
                     class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-[90]">
                 <!-- box shape -->
                 <svg viewBox="0 0 338.6666564941406 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
@@ -417,24 +446,29 @@
                 <div class="z-[100] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                     <!-- text area -->
                     <div>
-                        <h3 class=" font-mullish font-bold text-deepBlueHead leading-[1.2] rext-[1.375rem]">Payment Link
+                        <h3 class=" font-mullish text-deepBlueHead font-extrabold  text-[1.375rem] leading-[1.2] ">Route
                         </h3>
-                        <p class="font-mullish text-gray-500  mt-6">Share payment link via an email, SMS, messenger,
-                            chatbot
-                            etc. and get paid immediately</p>
+                        <p class="font-mullish text-gray-500  mt-6">Split incoming payments automatically to vendor’s
+                            accounts, manage marketplace money flow...</p>
                     </div>
                     <!-- hyperLink Know More -->
-                    <div class="mt-2 items-center cursor-pointer group">
-                        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-                            More</a>
-                        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
+                    <div class="mt-10 items-center cursor-pointer group flex justify-between w-[40%]">
+                        <a href="#"
+                            class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline group-hover:text-blue-400 transition-all duration-200">Know
+                            More <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500"
+                                style="display: inline;"></i> </a>
+
+                    </div>
+                    <div
+                        class=" opacity-0 self-end mt-[41%] absolute group-hover:opacity-100 transition-all duration-200">
+                        <img src="./images/features-wave.svg">
                     </div>
 
                 </div>
             </div>
             <!-- Box6 -->
-            <div class="w-full min-h-[15rem] relative cursor-pointer">
-                <img src="./images/payment-link-icon.svg" alt=""
+            <div class="w-full min-h-[15rem] relative cursor-pointer group">
+                <img src="./images/smart-collect-icon.svg" alt=""
                     class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-[90]">
                 <!-- box shape -->
                 <svg viewBox="0 0 338.6666564941406 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
@@ -456,23 +490,44 @@
                 <div class="z-[100] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                     <!-- text area -->
                     <div>
-                        <h3 class=" font-mullish font-bold text-deepBlueHead leading-[1.2] rext-[1.375rem]">Payment Link
+                        <h3 class=" font-mullish font-extrabold text-deepBlueHead text-[1.375rem] leading-[1.2] ">Smart
+                            Collect
                         </h3>
-                        <p class="font-mullish text-gray-500  mt-6">Share payment link via an email, SMS, messenger,
-                            chatbot
-                            etc. and get paid immediately</p>
+                        <p class="font-mullish text-gray-500  mt-6">Split incoming payments automatically to vendor’s
+                            accounts, manage marketplace money flow...</p>
                     </div>
                     <!-- hyperLink Know More -->
-                    <div class="mt-2 items-center cursor-pointer group">
-                        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-                            More</a>
-                        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
+                    <div class="mt-10 items-center cursor-pointer group flex justify-between w-[40%]">
+                        <a href="#"
+                            class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline group-hover:text-blue-400 transition-all duration-200">Know
+                            More <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500"
+                                style="display: inline;"></i> </a>
+
+                    </div>
+                    <div
+                        class=" opacity-0 self-end mt-[41%] absolute group-hover:opacity-100 transition-all duration-200">
+                        <img src="./images/features-wave.svg">
                     </div>
 
                 </div>
+
+
+
+            </div>
+
+            <div class="border border-blue-400 col-span-3 flex h-[50px] justify-center items-center rounded-lg gap-2 font-mullish
+                bg-gradient-to-r from-rose-100 to-teal-100 ">
+                <h5 class="font-bold">Not sure which product to choose?</h5>
+                <p class="text-gray-600">Answer a few questions and we’ll help you out</p>
+                <a class="text-blue-500" href="#">Find me a product
+                    <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500 -mt-1 -ml-1"
+                        style="display: inline;"></i>
+
+                </a>
             </div>
         </div>
-        <!-- Box1 -->
+
+
 
     </div>
 
@@ -484,64 +539,3 @@
 </body>
 
 </html>
-
-<!-- 
-<div class="border border-red-700 w-[10%]  flex flex-col ">
-    <h1>Payments Links</h1>
-    <h5>Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately</h5>
-    <div class="mt-2 items-center cursor-pointer group">
-        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-            More</a>
-        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
-    </div>
-</div>
-
-<div class="border border-red-700 w-[10%]  flex flex-col ">
-    <h1>Payments Links</h1>
-    <h5>Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately</h5>
-    <div class="mt-2 items-center cursor-pointer group">
-        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-            More</a>
-        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
-    </div>
-</div>
-
-<div class="border border-red-700 w-[10%]  flex flex-col ">
-    <h1>Payments Links</h1>
-    <h5>Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately</h5>
-    <div class="mt-2 items-center cursor-pointer group">
-        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-            More</a>
-        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
-    </div>
-</div>
-
-<div class="border border-red-700 w-[10%]  flex flex-col ">
-    <h1>Payments Links</h1>
-    <h5>Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately</h5>
-    <div class="mt-2 items-center cursor-pointer group">
-        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-            More</a>
-        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
-    </div>
-</div>
-
-<div class="border border-red-700 w-[10%]  flex flex-col ">
-    <h1>Payments Links</h1>
-    <h5>Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately</h5>
-    <div class="mt-2 items-center cursor-pointer group">
-        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-            More</a>
-        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
-    </div>
-</div>
-
-<div class="border border-red-700 w-[10%]  flex flex-col">
-    <h1>Payments Links</h1>
-    <h5>Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately</h5>
-    <div class="mt-2 items-center cursor-pointer group">
-        <a href="#" class="text-blue-600 text-lg font-mullish font-bold cursor-pointer inline">Know
-            More</a>
-        <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500" style="display: inline;"></i>
-    </div>
-</div> -->
