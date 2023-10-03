@@ -14,21 +14,27 @@ const symbols = '~`!@#$%^&*(){}[]|:;"<,>.?/';
 
 // Default Values
 let password = "";
-let passwordLength = 10;
-let checkCount = 1;
+let passwordLength = 5;
+let checkCount = 0;
 
 // Set Password Length
-handelSlider();
+handleSlider();
 
-function handelSlider() {
+function handleSlider() {
   inputSlider.value = passwordLength;
   lengthDisplay.innerText = passwordLength;
 }
 
+inputSlider.addEventListener("input",(e)=>{
+    passwordLength=e.target.value;
+    handleSlider();
+})
+
+
 
 function setIndicator(color){
     indicator.style.backgroundColor= color;
-    // Shadow
+    // Shadow   ------------ (HW)
 }
 
 // Generating Random Password
@@ -95,15 +101,86 @@ async function copyContent(){
 }
 
 
+ function sufflePassword(array){
+    // Fisher Yates Methods (It is a technique to shuffle the elements in an array)
+    for(let i =array.length-1;i>0;i--){
+        const j = Math.floor(Math.random() * (i+1));
+        const temp = array[i];
+        array[i]=array[j];
+        array[j]=temp;
+    }
+    let str="";
+    array.forEach((el)=> (str+=el));
+    return str;
+
+ }
+
+function handelCheckBoxChange(){
+    checkCount = 0;
+    allCheckBox.forEach((checkbox) => {
+        if(checkbox.checked)
+            checkCount++;
+        // Special Case
+        if(passwordLength < checkCount){
+            password=checkCount;
+            handleSlider();
+        }
+    })
+}
 
 
-inputSlider.addEventListener('input',(e)=>{
-    passwordLength=e.target.value;
-    handelSlider();
+CheckBox.forEach((checkbox) => {
+    checkbox.addEventListener('change',handelCheckBoxChange);
 })
 
-copyBtn.addEventListener('click', ()=>{
+
+
+copyBtn.addEventListener("click", ()=>{
     if(passwordDisplay.value)
         copyContent();
 })
 
+generateBtn.addEventListener("click",()=>{
+    if(checkCount<=0) return;
+
+    if(passwordLength < checkCount){   /////////////////////
+        passwordLength= checkCount;
+        handleSlider();
+    }
+
+    // Journey to find the new password
+
+    // Remove old Password (if Exists)
+
+    password="";
+    passwordDisplay.innerText=password;   // 213
+
+    // let's put the stuff mentioned in the checkboxes
+  
+    let funcArr = [];
+
+        if(uppercaseCheck.checked)
+            funcArr.push(generateUpperCase);
+        if(lowercaseCheckcaseCheck.checked)
+            funcArr.push(generateLowerCase);
+        if(numberCheck.checked)
+            funcArr.push(generateRandomNumber);
+        if(symbolCheck.checked)
+            funcArr.push(generateSymbol);
+
+        for( let i=0 ;i<funcArr.length;i++){
+            password+=funcArr[i]();     // 221 check () and above lines
+        }
+
+        for(let i=0;i<passwordLength-funcArr.length;i++){
+                let randIndex = getRndInteger(0,funcArr.length);
+                password += funcArr[randIndex]();
+        }
+        // shuffle the password
+        password = sufflePassword(Array.from(password));
+        // Display the password
+        passwordDisplay.value= password;
+        // Check the strength of the password
+        calcStrength();       
+    
+})
