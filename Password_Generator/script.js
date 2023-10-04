@@ -9,7 +9,7 @@ const numberCheck = document.querySelector("#numbers");
 const symbolCheck = document.querySelector("#symbols");
 const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector(".generateButton");
-const allCheckBox = document.querySelector("input[type=checkbox]");
+const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 const symbols = '~`!@#$%^&*(){}[]|:;"<,>.?/';
 
 // Default Values
@@ -46,18 +46,25 @@ function getRndInteger(min,max){
 // Other Functions
 
 function generateRandomNumber(){
+    // console.log("Add Random Number");
     return getRndInteger(0,9);
 }
 
 function generateLowerCase(){
+    // console.log("Add Lower case");
+
     return String.fromCharCode(getRndInteger(97,123));
 }
 
 function generateUpperCase(){
+    // console.log("Add Upper case");
+
     return String.fromCharCode(getRndInteger(65,91));
 }
  
 function generateSymbol(){
+    // console.log("Add Symbol");
+
     const randNumber = getRndInteger(0,symbols.length);
     return symbols.charAt(randNumber);
 }
@@ -112,7 +119,6 @@ async function copyContent(){
     let str="";
     array.forEach((el)=> (str+=el));
     return str;
-
  }
 
 function handelCheckBoxChange(){
@@ -129,7 +135,7 @@ function handelCheckBoxChange(){
 }
 
 
-CheckBox.forEach((checkbox) => {
+allCheckBox.forEach((checkbox) => {
     checkbox.addEventListener('change',handelCheckBoxChange);
 })
 
@@ -153,7 +159,7 @@ generateBtn.addEventListener("click",()=>{
     // Remove old Password (if Exists)
 
     password="";
-    passwordDisplay.innerText=password;   // 213
+    // passwordDisplay.innerText=password;   // 213
 
     // let's put the stuff mentioned in the checkboxes
   
@@ -161,7 +167,7 @@ generateBtn.addEventListener("click",()=>{
 
         if(uppercaseCheck.checked)
             funcArr.push(generateUpperCase);
-        if(lowercaseCheckcaseCheck.checked)
+        if(lowercaseCheck.checked)
             funcArr.push(generateLowerCase);
         if(numberCheck.checked)
             funcArr.push(generateRandomNumber);
@@ -176,10 +182,14 @@ generateBtn.addEventListener("click",()=>{
                 let randIndex = getRndInteger(0,funcArr.length);
                 password += funcArr[randIndex]();
         }
+
         // shuffle the password
         password = sufflePassword(Array.from(password));
+       
+        
         // Display the password
-        passwordDisplay.value= password;
+        passwordDisplay.value = password;
+        
         // Check the strength of the password
         calcStrength();       
     
