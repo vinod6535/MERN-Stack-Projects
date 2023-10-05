@@ -25,6 +25,10 @@ handleSlider();
 function handleSlider() {
   inputSlider.value = passwordLength;
   lengthDisplay.innerText = passwordLength;
+  const min = inputSlider.min;
+  const max = inputSlider.max;
+// Here the fisrt part is width and second is height
+  inputSlider.style.backgroundSize = ((passwordLength-min)*100/(max-min)) + "% 100%";
 }
 
 inputSlider.addEventListener("input",(e)=>{
@@ -36,7 +40,7 @@ inputSlider.addEventListener("input",(e)=>{
 
 function setIndicator(color){
     indicator.style.backgroundColor= color;
-    // Shadow   ------------ (HW)
+    indicator.style.boxShadow = `0px 0px 12px 7px ${color}`;
 }
 
 // Generating Random Password
@@ -75,7 +79,7 @@ function generateSymbol(){
 
 function calcStrength(){
 
-    let hasUpper=false;
+    let hasUpper=  false;
     let hasLower = false;
     let hasNumber = false;
     let hasSymbol = false;
@@ -85,10 +89,11 @@ function calcStrength(){
     if(numberCheck.Checked) hasNumber = true;
     if(symbolCheck.checked) hasSymbol = true;
 
-    if(hasUpper && hasLower && (hasNumber || hasSymbol) && passwordLength >=8) setIndicator("#0f0")
-    else if((hasLower && hasUpper) && (hasNumber && hasSymbol) && passwordLength >=6) setIndicator("#ff0")
+    if(hasUpper && hasLower && (hasNumber || hasSymbol) && passwordLength >=8) setIndicator("#0f0");
+    else if((hasLower && hasUpper) && (hasNumber && hasSymbol) && passwordLength >=6) setIndicator("#ff0");
     else{
-    setIndicator("#f00")}
+    setIndicator("#f00")
+}
 }
 
  async function copyContent(){
@@ -196,3 +201,4 @@ generateBtn.addEventListener("click",()=>{
         calcStrength();       
     
 })
+
