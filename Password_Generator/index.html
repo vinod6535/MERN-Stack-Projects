@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <div class="container">
 
-        <h1>Password Generator</h1>
+        <h1 id="heading">Password Generator</h1>
 
         <div class="display-container">
-            <input readonly placeholder="Password" class="display" data-passwordDisplay >
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
             <button data-copy>
                 <span data-copyMsg></span>
                 <img src="./assets/copy.svg" alt="copy" width="23" height="23">
@@ -21,9 +22,13 @@
         </div>
 
         <div class="input-container">
-            <p>Password Length</p>
-            <p data-lengthNumber>0</p>
-        </div>
+
+            <div class="length-container">
+                            <p>Password Length</p>
+                            <p data-lengthNumber>0</p>
+            </div>
+
+    
 
         <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
 
@@ -52,7 +57,7 @@
 
         <div class="strength-container">
             <p>Strength</p>
-            <div data-indicator></div>
+            <div data-indicator class="indicator"></div>
         </div>
 
         <!-- Generate Password Button -->
@@ -62,6 +67,10 @@
         </button>
 
     </div>
+    </div>
+
+
+    </body>
 
     <script src="script.js"></script>
 </body>

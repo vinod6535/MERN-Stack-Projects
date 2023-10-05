@@ -14,8 +14,10 @@ const symbols = '~`!@#$%^&*(){}[]|:;"<,>.?/';
 
 // Default Values
 let password = "";
-let passwordLength = 5;
+let passwordLength = 10;
 let checkCount = 0;
+
+setIndicator("#ccc");
 
 // Set Password Length
 handleSlider();
@@ -87,17 +89,17 @@ function calcStrength(){
     else if((hasLower && hasUpper) && (hasNumber && hasSymbol) && passwordLength >=6) setIndicator("#ff0")
     else{
     setIndicator("#f00")}
-
 }
 
-async function copyContent(){
+ async function copyContent(){
     try{
-        await navigator.clipboard.writeText(passwordDisplay);
+         await navigator.clipboard.writeText(passwordDisplay);        
         copyMsg.innerText="copied";
     }
     catch(e){
         copyMsg.innerText="Failed";
     }
+    
     // to make copy span visible
     copyMsg.classList.add("active")  //-------------
 
