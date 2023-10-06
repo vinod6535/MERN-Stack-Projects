@@ -79,26 +79,28 @@ function generateSymbol(){
 
 function calcStrength(){
 
-    let hasUpper=  false;
-    let hasLower = false;
-    let hasNumber = false;
-    let hasSymbol = false;
+    const hasUpper = uppercaseCheck.checked || false;
+    const hasLower = lowercaseCheck.checked || false;
+    const hasNumber = numberCheck.checked || false;
+    const hasSymbol = symbolCheck.checked || false;
 
-    if(uppercaseCheck.Checked) hasUpper = true;
-    if(lowercaseCheck.Checked) hasLower = true;
-    if(numberCheck.Checked) hasNumber = true;
-    if(symbolCheck.checked) hasSymbol = true;
 
-    if(hasUpper && hasLower && (hasNumber || hasSymbol) && passwordLength >=8) setIndicator("#0f0");
-    else if((hasLower && hasUpper) && (hasNumber && hasSymbol) && passwordLength >=6) setIndicator("#ff0");
+    if(hasUpper && hasLower && (hasNumber || hasSymbol) && passwordLength >=8){
+        setIndicator("#0f0"); //Green
+    }
+    else if((hasLower && hasUpper) && (hasNumber && hasSymbol) && passwordLength >=6){
+        setIndicator("#ff0"); // Shaded-Yellow
+    }
     else{
-    setIndicator("#f00")
+    setIndicator("#f00") //red
 }
 }
+
+
 
  async function copyContent(){
     try{
-         await navigator.clipboard.writeText(passwordDisplay);        
+         await navigator.clipboard.writeText(passwordDisplay.value);        
         copyMsg.innerText="copied";
     }
     catch(e){
