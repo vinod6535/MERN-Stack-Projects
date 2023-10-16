@@ -95,3 +95,21 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
     border-bottom: 1px solid #ccc;
  }
+ .table-box table tr td{
+    border-right: 1px solid #ccc;
+    padding: 10px 0px 5px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    border-bottom: 1px solid #ccc;
+ }
+ .table-box table tr button{
+    width: 40%;
+    border: none;
+    outline: none;
+    background-color: #4286F5;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    /* margin: 0px 10px; */
+    padding: 5px 0px 5px;
+ }
