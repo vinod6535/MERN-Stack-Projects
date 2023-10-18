@@ -67,7 +67,8 @@
     outline: none;
     border: none;
     border-bottom: 3px solid #4286F5;
-    font-weight: bold;
+    font-weight: bolder;
+    font-size: 17px;
 }
 
 .right-box button{

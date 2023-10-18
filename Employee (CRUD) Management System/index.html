@@ -18,7 +18,7 @@
         </div>
         <div class="right-box">
             <i class="fa fa-search"></i>
-            <input type="text" id="empId">
+            <input type="text" id="empId" placeholder="Enter Employee ID">
             <button style="background-color: #EE534F;">Search</button>
         </div>
     </div>
@@ -36,76 +36,9 @@
                 <th>Job Title</th>
                 <th>Action</th>
             </tr>
-            <tr>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>
-                    <button><i class="fa fa-eye"></i></button>
-                    <button style="background-color: #EE534F;"><i class="fa fa-trash"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>
-                    <button><i class="fa fa-eye"></i></button>
-                    <button style="background-color: #EE534F;"><i class="fa fa-trash"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>
-                    <button><i class="fa fa-eye"></i></button>
-                    <button style="background-color: #EE534F;"><i class="fa fa-trash"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>
-                    <button><i class="fa fa-eye"></i></button>
-                    <button style="background-color: #EE534F;"><i class="fa fa-trash"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>Hello World</td>
-                <td>
-                    <button><i class="fa fa-eye"></i></button>
-                    <button style="background-color: #EE534F;"><i class="fa fa-trash"></i></button>
-                </td>
-            </tr>
+            <tbody id="table-data">
+                 
+            </tbody>
         </table>
     </div>
 
@@ -113,40 +46,39 @@
         <i class="fa fa-times-circle close-icon"></i>
         <div class="left-modal">
            <div class="img-box">
-                <img src="./img/photo-1534528741775-53994a69daeb.avif" alt="Employee" width="150" height="150" class="image">
+                <img src="./img/default.avif" alt="Employee" width="150" height="150" class="image" id="profile-pic">
                 <i class="fa fa-plus"> </i>
-                <input type="file">
+                <input type="file" id="upload-pic">
            </div>
         </div>
         <div class="right-modal">
-            
             <form id="registration-form">
                 <div class="input-box">
                     <label for="id">Id :</label>
-                    <input type="text" name="" id="id">
+                    <input type="text" name="" required id="id">
                 </div>
                 <div class="input-box">
                     <label for="name">Name : </label>
-                    <input type="text" name="" id="name">
+                    <input type="text" name="" required id="name">
                 </div>
                 <div class="input-box">
                     <label for="l-name">Last Name : </label>
-                    <input type="text" name="" id="l-name">
+                    <input type="text" required name="" id="l-name">
                 </div>
                 <div class="input-box">
                     <label for="emial">E-mail : </label>
-                    <input type="text" name="" id="email">
+                    <input type="text" required name="" id="email">
                 </div>
                 <div class="input-box">
                     <label for="office-code">office Code : </label>
-                    <input type="text" name="" id="office-code">
+                    <input type="text"required  name="" id="office-code">
                 </div>
                 <div class="input-box">
                     <label for="job-title">Job Title : </label>
-                    <input type="text" name="" id="job-title">
+                    <input type="text" required name="" id="job-title">
                 </div>
                 <div class="input-box">
-                    <button id="register_btn">Register</button>
+                    <button id="register-btn">Register</button>
                      <button disabled style="background-color: #EE534F;">Update</button>
                 </div>
             </form>
