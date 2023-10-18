@@ -10,7 +10,6 @@ addBtn.onclick = function(){
 } 
 
 closeModalBtn.onclick = function(){
-    console.log("Under close")
     modal.classList.remove("active");
 } 
 
@@ -27,14 +26,16 @@ var userData = [];
 var registerForm = document.querySelector("#registration-form");
 // End of all Global variables
 
-registerbtn.onclick = (e)=>{
+
+registerForm.onsubmit = (e) => {
     registerData();
-    registerForm.reset('');
+    registerForm.reset();
     getDataFromLocal();
-    // To prevent the page reload after registration (Defalut behaviour)
+    // To prevent the page reload after registration (Default behavior)
     e.preventDefault();
     closeModalBtn.click();
 }
+
 
 function registerData(){
     userData.push({
@@ -48,6 +49,7 @@ function registerData(){
     })
     var userStringData = JSON.stringify(userData);
     localStorage.setItem("userStringDataKey",userStringData);
+    Swal.fire( 'Good job!','Registration Successfull','success')
 }
 // To store the data in the array as a object and the data remains save after refresh the page
 if(localStorage.getItem("userStringDataKey")!=null){
@@ -58,27 +60,71 @@ if(localStorage.getItem("userStringDataKey")!=null){
 
 var tableData = document.querySelector("#table-data");
  
+
+// ...
+
 const getDataFromLocal = () => {
-    tableData.innerHTML="";
+    tableData.innerHTML = "";
     userData.forEach((data, index) => {
-        tableData.innerHTML += `
-        <tr index = '${index}'>
-                <td>${index+1}</td>
-                <td><img src="${data.profile_pic}" alt="Employee" width="50" height="50" style="border-raidus= "50%""></td>
-                <td>${data.id}</td>
-                <td>${data.name}</td>
-                <td>${data.l_name}</td>
-                <td>${data.email}</td>
-                <td>${data.of_code}</td>
-                <td>${data.job_title}</td>
-                <td>
-                    <button><i class="fa fa-eye"></i></button>
-                    <button style="background-color: #EE534F;"><i class="fa fa-trash"></i></button>
-                </td>
-            </tr>
+        const row = document.createElement("tr");
+        row.setAttribute("index", index);
+        row.innerHTML = `
+            <td>${index + 1}</td>
+            <td><img src="${data.profile_pic}" alt="Employee" width="50" height="50" style="border-radius: 50%;"></td>
+            <td>${data.id}</td>
+            <td>${data.name}</td>
+            <td>${data.l_name}</td>
+            <td>${data.email}</td>
+            <td>${data.of_code}</td>
+            <td>${data.job_title}</td>
+            <td>
+                <button><i class="fa fa-eye"></i></button>
+                <button class="del-btn" style="background-color: #EE534F;"><i class="fa fa-trash"></i></button>
+            </td>
         `;
+
+        const delButton = row.querySelector(".del-btn");
+        delButton.onclick = () => {
+            // Get the index from the row's attribute
+            const dataIndex = row.getAttribute("index");
+
+            // Show a confirmation dialog
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel',
+                reverseButtons: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // User confirmed the deletion
+                    deleteUser(dataIndex);
+                }
+            });
+        };
+
+        tableData.appendChild(row);
     });
+
+    // ...
+
+    function deleteUser(index) {
+        // Remove the corresponding user data
+        userData.splice(index, 1);
+        // Update the localStorage
+        localStorage.setItem("userStringDataKey", JSON.stringify(userData));
+        // Refresh the displayed data
+        getDataFromLocal();
+        // Display a success message
+        Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+    }
 }
+
+
+// ...
+
 getDataFromLocal();
 
 // Image Processing
@@ -87,6 +133,7 @@ var profilePic = document.querySelector("#profile-pic");
 var uploadPic = document.querySelector("#upload-pic");
 
 uploadPic.onchange = ()=>{
+
         if(uploadPic.files[0].size < 1000000){
             var fReader = new FileReader();
             fReader.onload=function(e){
@@ -99,10 +146,5 @@ uploadPic.onchange = ()=>{
             alert("File size is too long");
         }
 }
-
-
-
-
-
 
    
