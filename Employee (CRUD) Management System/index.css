@@ -183,6 +183,7 @@
  }
 
  /* Right Modal Styling */
+
  .modal .right-modal{
     width: 70%;
     height: 100%;
@@ -190,7 +191,7 @@
     padding: 30px;
  }
 
- .modal .right-modal  .input-box{
+ .modal .right-modal .input-box{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -209,6 +210,8 @@
     padding: 13px;
     background-color: transparent;
     border-bottom: 3px solid #4286F5;
+    font-size: 24px;
+
  }
 .modal .right-modal .input-box button{
     width: 48%;
