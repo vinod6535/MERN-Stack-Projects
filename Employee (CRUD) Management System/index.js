@@ -11,6 +11,7 @@ var allInput = registerForm.querySelectorAll("input");
 // open Modal
 addBtn.onclick = ()=>{
     modal.classList.add("active"); 
+    updateBtn.disabled = true;
 }
 
 // Close Modal
@@ -204,4 +205,30 @@ uploadPic.onchange = ()=>{
         }
 }
 
-   
+// Search employee with employee ID :
+
+var searchEl = document.querySelector("#empId");
+
+searchEl.oninput = ()=>{
+    searchFun();
+}
+
+function searchFun(){
+    var tr = tableData.querySelectorAll("TR");
+    // console.log(tr);
+    var filter = searchEl.value.toLowerCase();
+    var i;    
+    for(i=0;i<tr.length;i++){
+        var td = tr[i].getElementsByTagName("TD")[2];
+        var id = td.innerHTML;
+        if(id.toLowerCase().indexOf(filter)>-1){
+            tr[i].style.display="";
+        }
+        else{
+            tr[i].style.display="none";
+        }
+    }
+}
+
+
+
