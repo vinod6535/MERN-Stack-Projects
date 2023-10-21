@@ -32,6 +32,8 @@
 .left-box{
     width: 50%;
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 .left-box button , .right-box button{
     border: none;
@@ -46,6 +48,11 @@
 
 .left-box .second-btn{
    background-color: #33b5e6;
+}
+
+#del-all-box{
+   width: 30px;
+   height: 30px;
 }
 
 /* Right Side */

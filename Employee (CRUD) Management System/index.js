@@ -17,10 +17,10 @@ addBtn.onclick = ()=>{
 // Close Modal
 closeBtn.onclick=()=>{
     modal.classList.remove("active");
-    // var i;
-    // for(i=0;i<allInput.length;i++){
-    //     allInput[i].value="";
-    // }
+    var i;
+    for(i=0;i<allInput.length;i++){
+        allInput[i].value="";
+    }
 }
 
 // Start all global Variables
@@ -48,7 +48,6 @@ registerBtn.onclick = (e) => {
     registerForm.reset();
     // So that the page does not refrest after the registration
     closeBtn.click();  
-
 }
 // To add the local stroge data to array , so after refresh we can't lost data
 
@@ -229,6 +228,36 @@ function searchFun(){
         }
     }
 }
+
+// clear all data
+
+var delAllBtn = document.querySelector("#del-all-btn");
+var allDelBox = document.querySelector("#del-all-box");
+
+delAllBtn.addEventListener('click',()=>{
+    if(allDelBox.checked == true){
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, cancel',
+            reverseButtons: true,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                localStorage.removeItem("userData");
+                window.location = location.href;
+            } 
+            else{
+                swal.fire("The data is safe");
+              }
+        });
+    }
+    else{
+        swal.fire ("The Box Error" , "Please check the box" , "warning");
+    }
+})
 
 
 
