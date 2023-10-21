@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+button,input[type="checkbox"] {
+   cursor: pointer;
+}
+
 /* Header Styling */
 
 .header{
@@ -152,6 +156,7 @@
     padding: 10px;
     color: #EE534F;
     font-size: 30px;
+    cursor: pointer;
  }
  
  .modal .left-modal{
@@ -187,6 +192,7 @@
       right: 40px;
       top: 90px;
       opacity: 0;
+      cursor: pointer;
  }
 
  /* Right Modal Styling */

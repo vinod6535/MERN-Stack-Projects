@@ -45,10 +45,12 @@ registerBtn.onclick = (e) => {
     // alert();
     registrationData();
     getDataFromLocal();
-    registerForm.reset();
+    registerForm.reset('');
     // So that the page does not refrest after the registration
     closeBtn.click();  
 }
+
+
 // To add the local stroge data to array , so after refresh we can't lost data
 
 if(localStorage.getItem("userData") != null){
@@ -93,7 +95,9 @@ function getDataFromLocal() {
         <td>${data.office}</td>
         <td>${data.jobTitle}</td>
         <td>
-            <button class="edit-btn"><i class="fa fa-eye"></i></button>
+            <button class="edit-btn">
+            <i class="fa fa-pencil"></i>
+            </button>
             <button class="del-btn" style="background-color: #EE534F;"><i class="fa fa-trash"></i></button>
         </td>
     </tr>
@@ -156,7 +160,8 @@ for (let i = 0; i < allEdit.length; i++) {
             officeEl.value= officeCode;
             jobTitleEl.value = jobTitle;
             profile_pic.src = profilePic;
-            updateBtn.onclick=function(e){
+
+            updateBtn.addEventListener('click',(e)=>{
                 userData[index]={
                     id : idEl.value,
                     name : nameEl.value,
@@ -167,11 +172,12 @@ for (let i = 0; i < allEdit.length; i++) {
                     profilePic : uploadPic.value == "" ? profile_pic.src : imgUrl
                 }
                 localStorage.setItem("userData",JSON.stringify(userData));
-            }
+            })
     });
 }
-
 }
+
+
 
 function deleteUser(index) {
     // Remove the corresponding user data
