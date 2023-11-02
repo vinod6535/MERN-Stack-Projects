@@ -11,6 +11,10 @@
    padding: 10px 30px;
    background-color: #ee534f;
  }
+
+ button{
+  cursor: pointer;
+ }
  
  .header h5 {
    font-weight: bold;
@@ -98,6 +102,7 @@
    font-size: 20px;
    border-bottom: 1px solid #ccc;
  }
+
  
  .table-box table tr td {
    border-right: 1px solid #ccc;
@@ -161,6 +166,7 @@
    display: flex;
    padding: 30px;
    position: relative;
+   border-radius: 50%;
  }
  
  .modal .left-modal .img-box i {
@@ -179,6 +185,7 @@
    top: 90px;
    right: 60px;
    opacity: 0;
+   font-size: 100px;
  }
  
  .modal .left-modal .img-box img {
@@ -213,6 +220,8 @@
    outline: none;
    background-color: transparent;
    border-bottom: 3px solid #4286f5;
+   font-size: 22px;
+
  }
  
  .modal .right-modal .input-box button {
